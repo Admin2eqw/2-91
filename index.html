@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chào mừng Quốc khánh 2-9</title>
+    <link href="1.png" rel="icon">
+    <link href="1.png" rel="apple-touch-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('12.jpg'); /* Thay thế bằng tên tệp ảnh của bạn */
+            background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ nền */
+            background-position: center; /* Căn giữa hình ảnh */
+            filter: brightness(70%); /* Điều chỉnh độ sáng để làm ảnh mờ */
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            z-index: 10;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            animation: textGlow 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes textGlow {
+            from { text-shadow: 0 0 5px #fff, 0 0 10px #DA251D; }
+            to { text-shadow: 0 0 10px #fff, 0 0 20px #DA251D; }
+        }
+        p {
+            font-size: 1.5em;
+            animation: moveUp 2s ease-in-out infinite alternate;
+        }
+        @keyframes moveUp {
+            from { transform: translateY(5px); }
+            to { transform: translateY(-5px); }
+        }
+        .flag-img {
+            width: 200px;
+            height: auto;
+            margin: 0 auto 20px;
+            animation: flagWave 3s ease-in-out infinite;
+        }
+        @keyframes flagWave {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
+        }
+        .button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #DA251D; /* Màu nền đỏ của cờ Việt Nam */
+            color: #F7E03C; /* Màu chữ vàng giống như ngôi sao trên cờ */
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            border: 2px solid #DA251D; /* Đường viền màu đỏ của cờ Việt Nam */
+        }
+        .button:hover {
+            background-color: #C8102E; /* Màu đỏ đậm khi hover */
+        }
+        .button span {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/320px-Flag_of_Vietnam.svg.png" alt="Quốc kỳ Việt Nam" class="flag-img">
+        <h1>Chào mừng Quốc khánh 2-9</h1>
+        <p>Chúc mừng ngày lễ Quốc khánh Việt Nam!</p>
+        <a href="https://admin2eqw.github.io/2-9/" class="button" onclick="playSound()"><span>Bắt đầu</span></a>
+    </div>
+    <audio id="click-sound" src="13.mpeg"></audio>
+    <script>
+        function playSound() {
+            var sound = document.getElementById("click-sound");
+            sound.play();
+        }
+    </script>
+</body>
+</html>
